@@ -1,7 +1,7 @@
 :root {
-  --primary: #232F3E;
-  --secondary: #F3A847;
-  --tertiary: #B12704;
+  --primary: #232f3e;
+  --secondary: #643cd1;
+  --tertiary: #b12704;
   --light: #fafafa;
   --dark: #272f32;
   --error: rgb(228, 46, 1);
@@ -21,11 +21,12 @@ body {
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Karla', sans-serif;
+  font-family: "Karla", sans-serif;
   font-weight: 400;
   line-height: 1.5;
   font-size: 16px;
-  color: var(--dark);
+  color: var(--light);
+  background-color: var(--dark);
 }
 
 h1,
@@ -34,7 +35,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Rubik', sans-serif;
+  font-family: "Rubik", sans-serif;
   font-weight: 500;
   margin: 5px 0;
   line-height: 1.25;
@@ -70,8 +71,10 @@ p {
 }
 
 a {
-  color: var(--tertiary);
-  text-decoration: none;
+  color: rgba(240, 97, 2, 0.932);
+  text-decoration: underline;
+  text-decoration-thickness: 5px;
+  text-underline-offset: 5px;
   font-weight: bold;
 }
 
@@ -80,7 +83,7 @@ a:hover {
 }
 
 header {
-  background: var(--primary);
+  background: var(--dark);
 }
 
 header a {
@@ -90,22 +93,32 @@ header a {
 button {
   font-size: 1rem;
   text-decoration: none;
-  padding: 0.25rem 1rem;
-  border-radius: .5rem;
+  padding: 10px;
+  border-radius: 0.5rem;
   border: none;
   outline: none;
   cursor: pointer;
-  margin: 0 1px;
+  margin: 10px;
+  color: var(--light);
   background-color: var(--secondary);
 }
 
 button:hover {
-  opacity: .8;
+  border: var(--secondary) 2px solid;
+  background-color: var(--dark);
+  transition: 0.3s ease-in-out;
 }
 
 button[disabled] {
   cursor: default;
-  opacity: .8;
+  opacity: 0.8;
+  background-color: var(--tertiary);
+}
+
+.btn:hover {
+  background-color: white;
+  color: black;
+  transition: 0.3s ease-in-out;
 }
 
 img {
@@ -131,7 +144,7 @@ input {
 
 input:focus {
   border: 1px solid var(--secondary);
-  box-shadow: 0 0 .25rem rgba(0, 0, 0, .5);
+  box-shadow: 0 0 0.25rem rgba(0, 0, 0, 0.5);
 }
 
 .container {
@@ -141,8 +154,27 @@ input:focus {
   margin-right: auto;
 }
 
+.card {
+  background-color: white;
+  margin: 15px;
+  flex-wrap: wrap;
+  flex: 0 1 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #232f3e;
+  border-radius: 5px;
+  width: 25%;
+  text-align: center;
+}
+
+.productName {
+  color: var(--dark);
+}
+
 .flex-row {
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
 }
 
@@ -157,6 +189,7 @@ input:focus {
 .mx-1 {
   margin-right: var(--spacing-one);
   margin-left: var(--spacing-one);
+  list-style: none;
 }
 
 .mx-2 {
@@ -194,9 +227,10 @@ input:focus {
   padding-bottom: var(--spacing-two);
 }
 
-.card {
-  width: 25%;
-  text-align: center;
+.nav {
+  display: flex;
+  justify-content: left;
+  margin: 2em;
 }
 
 .error-text {
