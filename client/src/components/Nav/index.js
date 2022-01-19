@@ -34,13 +34,8 @@ function Nav() {
 
   return (
     <header className="flex-row px-1 nav">
-      <h1>
-        <Link to="/">
-          <span role="img" aria-label="shopping bag">
-            🛍️
-          </span>
-          -Shop-Shop
-        </Link>
+      <h1 className="title">
+        <Link to="/">E-Commerce</Link>
       </h1>
 
       <nav>{showNavigation()}</nav>

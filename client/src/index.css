@@ -72,11 +72,29 @@ p {
 
 a {
   color: rgba(240, 97, 2, 0.932);
-  text-decoration: underline;
-  text-decoration-thickness: 5px;
-  text-underline-offset: 5px;
+
   font-weight: bold;
 }
+/* 
+a:hover {
+  color: red;
+}
+
+a::before {
+  content: "";
+  display: inline;
+  width: 0%;
+  height: 0.2em;
+  position: absolute;
+  bottom: 0;
+  background-color: red;
+  transition: width 0.2s ease-in;
+}
+
+a:hover::before,
+a:focus::before {
+  width: 100%;
+} */
 
 a:hover {
   text-decoration: underline;
@@ -90,10 +108,20 @@ header a {
   color: var(--light);
 }
 
+.title {
+  background-color: rgba(240, 97, 2, 0.932);
+  padding: 34px;
+  color: black;
+  font-size: 2em;
+  transform: skew(-15deg);
+  text-decoration: none;
+  border-radius: 90% 91% 92% 90% / 93% 93% 88% 86%;
+}
+
 button {
   font-size: 1rem;
   text-decoration: none;
-  padding: 10px;
+  padding: 13px;
   border-radius: 0.5rem;
   border: none;
   outline: none;
@@ -106,7 +134,8 @@ button {
 button:hover {
   border: var(--secondary) 2px solid;
   background-color: var(--dark);
-  transition: 0.3s ease-in-out;
+  transition: 0.2s ease-in-out;
+  transform: skew(-5deg);
 }
 
 button[disabled] {
@@ -118,7 +147,7 @@ button[disabled] {
 .btn:hover {
   background-color: white;
   color: black;
-  transition: 0.3s ease-in-out;
+  transition: 0.2s ease-in-out;
 }
 
 img {
