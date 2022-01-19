@@ -98,6 +98,7 @@ a:focus::before {
 
 a:hover {
   text-decoration: underline;
+  color: #386194;
 }
 
 header {
