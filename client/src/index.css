@@ -3,7 +3,7 @@
   --secondary: #643cd1;
   --tertiary: #b12704;
   --light: #fafafa;
-  --dark: #272f32;
+  --dark: #050505;
   --error: rgb(228, 46, 1);
   --spacing-one: calc(1rem * 0.5);
   --spacing-two: calc(1rem);
@@ -29,20 +29,33 @@ body {
   background-color: var(--dark);
 }
 
-h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
   font-family: "Rubik", sans-serif;
-  font-weight: 500;
-  margin: 5px 0;
-  line-height: 1.25;
+  font-weight: 700;
+  margin: 2px 0;
+  line-height: 1.45;
+  backdrop-filter: blur(0px) saturate(200%);
+  -webkit-backdrop-filter: blur(0px) saturate(200%);
+  background-color: rgba(255, 255, 255, 0.36);
+  border-radius: 12px;
+  border: 1px solid rgba(209, 213, 219, 0.3);
+  padding: 4px;
+  text-align: center;
+  color: var(--light);
 }
 
 h1 {
   font-size: 2.25rem;
+  font-family: "Rubik", sans-serif;
+  font-weight: 700;
+  margin: 2px 0;
+
+  background-color: var(--tertiary);
+  padding: 5px;
 }
 
 h2 {
@@ -71,9 +84,8 @@ p {
 }
 
 a {
-  color: rgba(240, 97, 2, 0.932);
-
   font-weight: bold;
+  color: white;
 }
 /* 
 a:hover {
@@ -97,8 +109,7 @@ a:focus::before {
 } */
 
 a:hover {
-  text-decoration: underline;
-  color: #386194;
+  color: #eea300d0;
 }
 
 header {
@@ -133,9 +144,9 @@ button {
 }
 
 button:hover {
-  border: var(--secondary) 2px solid;
+  border: var(--secondary) 1.2px solid;
   background-color: var(--dark);
-  transition: 0.2s ease-in-out;
+  transition: 0.2s linear;
   transform: skew(-5deg);
 }
 
@@ -153,6 +164,7 @@ button[disabled] {
 
 img {
   max-width: 100%;
+  border: 2px solid var(--dark);
 }
 
 span[role="img"] {
@@ -178,10 +190,14 @@ input:focus {
 }
 
 .container {
-  width: 85%;
+  width: 95%;
   max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
+  align-items: center;
 }
 
 .card {
@@ -200,6 +216,18 @@ input:focus {
 
 .productName {
   color: var(--dark);
+}
+
+.product {
+  background-color: var(--dark);
+  border: none;
+  margin-bottom: 15px;
+}
+
+.login,
+.signup {
+  width: 40%;
+  margin-bottom: 1em;
 }
 
 .flex-row {
@@ -227,10 +255,10 @@ input:focus {
   margin-left: var(--spacing-two);
 }
 
-.my-1 {
+/* .my-1 {
   margin-top: var(--spacing-one);
   margin-bottom: var(--spacing-one);
-}
+} */
 
 .my-2 {
   margin-top: var(--spacing-two);
@@ -270,5 +298,19 @@ input:focus {
 @media screen and (max-width: 768px) {
   .card {
     width: 100%;
+  }
+
+  .form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+  }
+
+  .login,
+  .signup {
+    width: 70%;
+    margin-bottom: 1em;
   }
 }
