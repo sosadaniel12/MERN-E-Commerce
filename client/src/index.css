@@ -109,7 +109,10 @@ a:focus::before {
 } */
 
 a:hover {
-  color: #eea300d0;
+  text-decoration: underline;
+
+  text-shadow: #b12704 2px 1px 1px;
+  color: #b1a004;
 }
 
 header {
@@ -144,10 +147,8 @@ button {
 }
 
 button:hover {
-  border: var(--secondary) 1.2px solid;
   background-color: var(--dark);
-  transition: 0.2s linear;
-  transform: skew(-5deg);
+  transition: 0.4s ease-out;
 }
 
 button[disabled] {
@@ -159,7 +160,6 @@ button[disabled] {
 .btn:hover {
   background-color: white;
   color: black;
-  transition: 0.2s ease-in-out;
 }
 
 img {
@@ -213,9 +213,21 @@ input:focus {
   width: 25%;
   text-align: center;
 }
+.card:hover {
+  transform: translateY(-9px);
+  transition: 0.4s ease-in-out;
+}
 
 .productName {
   color: var(--dark);
+}
+
+.productName:hover {
+  text-decoration: underline;
+
+  text-shadow: #b12704 2px 1px 1px;
+  color: #b1a004;
+  transform: skew(-15deg);
 }
 
 .product {
