@@ -8,6 +8,7 @@ import Auth from "../../utils/auth";
 import { useDispatch, useSelector } from "react-redux";
 import { TOGGLE_CART, ADD_MULTIPLE_TO_CART } from "../../utils/actions";
 import "./style.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const stripePromise = loadStripe("pk_test_TYooMQauvdEDq54NiTphI7jx");
 
@@ -67,6 +68,7 @@ const Cart = () => {
         <span role="img" aria-label="trash">
           🛒
         </span>
+        <FontAwesomeIcon icon="fa-regular fa-cart-shopping" />
       </div>
     );
   }
@@ -78,9 +80,9 @@ const Cart = () => {
       </div>
       <h2 className="cartTitle">Shopping Cart</h2>
       {state.cart.length ? (
-        <div>
+        <div className="itemsBox">
           {state.cart.map((item) => (
-            <CartItem key={item._id} item={item} />
+            <CartItem key={item._id} item={item} className="items" />
           ))}
 
           <div className="flex-row space-between">
