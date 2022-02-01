@@ -199,18 +199,9 @@ input:focus {
 }
 
 .card {
-  /* flex-wrap: wrap;
-  flex: 0 1 auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: center; */
-
   border-radius: 5px;
   width: 25%;
   text-align: center;
-}
-
-.productName {
 }
 
 .product {
@@ -249,11 +240,6 @@ input:focus {
   margin-right: var(--spacing-two);
   margin-left: var(--spacing-two);
 }
-
-/* .my-1 {
-  margin-top: var(--spacing-one);
-  margin-bottom: var(--spacing-one);
-} */
 
 .my-2 {
   margin-top: var(--spacing-two);
@@ -309,5 +295,15 @@ input:focus {
   .signup {
     width: 70%;
     margin-bottom: 1em;
+  }
+
+  img {
+    max-width: 70%;
+  }
+
+  .buttonLayout {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
   }
 }
